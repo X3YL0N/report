@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Report Tool TCS</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #013220, #006994, #000);
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        footer {
+            width: 60%;
+            height: 22px;
+            background-image: url('https://tcsdemonic.vercel.app/footer2.png'); /* Custom footer image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Credits */
+        .credit {
+            margin: 5px 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .credit a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .credit a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .logo-container img {
+            width: 100px;
+            height: 85px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        h3 {
+            margin-top: 120px;
+            font-weight: 600;
+        }
+
+        /* Form Elements */
+        input, select, button {
+            width: 100%;
+            max-width: 320px;
+            margin: 10px auto;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            display: block;
+        }
+
+        input, select {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        button {
+            background: linear-gradient(90deg, #ff3131, #ff6347);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(255, 99, 71, 0.4);
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #ff6347, #ff3131);
+            transform: scale(1.05);
+        }
+
+        /* Status Box */
+        #status {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/facebook-logo-animation-download-in-lottie-json-gif-static-svg-file-formats--social-media-pack-logos-animations-4735195.gif" alt="Logo">
+    </div>
+
+    <h3>TCS FB REPORT</h3>
+
+    <input type="text" id="fbUser" placeholder="Enter Facebook Username or ID">
+    
+    <select id="reportType">
+        <option value="fake_account">Fake Account</option>
+        <option value="fake_name">Fake Name</option>
+        <option value="harassment">Harassment</option>
+        <option value="spam">Spam</option>
+        <option value="violence">Violence/Threats</option>
+    </select>
+
+    <label>Number of Reports:</label>
+    <input type="number" id="reportCount" min="1" max="100" value="1">
+
+    <label>
+        <input type="checkbox" id="useProxy"> Use Proxies
+    </label>
+    
+    <button id="submitReport">Submit Report</button>
+
+    <div id="status">Reports Sent: 0</div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Particle.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100 },
+                "color": { "value": "#00ffcc" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.8, "random": true },
+                "size": { "value": 3, "random": true },
+                "move": { "speed": 2 }
+            }
+        });
+    </script>
+
+    <script src="popup.js"></script>
+
+</body>
+<center>
+    <footer></footer>
+    <div class="credit">
+        AUTHOR: <a href="https://t.me/termux_command_store" target="_blank">VISIT NOW</a>
+    </div>
+</center>
+</html>

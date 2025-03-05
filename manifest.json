@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Advanced Facebook Report Tool",
+  "description": "Report Facebook profiles more effectively using a logged-in session and proxies.",
+  "version": "2.0",
+  "permissions": [
+    "storage",
+    "cookies",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://www.facebook.com/*",
+    "https://tcsdemonic.rf.gd/tcs/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
